@@ -1,6 +1,9 @@
 const authRouter=require('./auth');
 const movieRouter=require('./movie');
 module.exports=(app)=>{
+    app.get('/', (req, res) => {
+        return res.json({message: "ok"});
+    })
     app.use('/auth',authRouter)
     app.use(movieRouter);
 };

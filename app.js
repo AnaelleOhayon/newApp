@@ -11,8 +11,10 @@ process.on('unhandledRejection',(reason)=>{
 
 middleware(app)
 
+app.get('/', (req, res) => {
+    return res.json({message: "ok"});
+})
 
-//route
 routes(app);
 
 app.use((req,res,next) => {

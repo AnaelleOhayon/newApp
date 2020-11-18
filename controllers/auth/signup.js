@@ -1,6 +1,12 @@
 const {User}=require('../../models')
 const createError=require('http-errors')
 const postSignup=(req,res,next)=>{
+
+    /**
+     * Je viens d'ajouter cette ligne pour que tu check si déjà ta requête marche depuis postman
+     */
+    return res.json({message: "ok"})
+
     //data validation
 const validation=User.validate(req,body);
 if(validation.error){
